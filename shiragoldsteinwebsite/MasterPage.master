@@ -13,6 +13,21 @@
     
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-        </asp:ContentPlaceHolder>
+    <table>
+        <tr1>כותרת לאתר</tr1>
+        <tr2>
+            <td><a href="אודות.aspx">אודות</a>
+                <a href="גלריה.aspx">גלריה</a>
+                <a href="דף בית.aspx">דף הבית</a>
+                <a href="הרשמה.aspx">הרשמה</a>
+                <a href="חיפוש.aspx">חיפוש</a>
+                <a href="יציאה.aspx">יציאה</a>
+                <a href="כניסה.aspx">כניסה</a>
+                <a href="מנהל.aspx">מנהל</a>
+                <a href="עדכון פרטים.aspx">עדכון פרטים</a>
+
+        </tr2>
+    </table>
+    </asp:ContentPlaceHolder>
 </body>
 </html>
