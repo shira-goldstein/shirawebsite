@@ -4,30 +4,119 @@
 
 <html>
 <head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder id="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body> 
-    <h1> Shira's  web site </h1>
-    
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-    <table>
-        <tr1>כותרת לאתר</tr1>
-        <tr2>
-            <td><a href="אודות.aspx">אודות</a>
-                <a href="גלריה.aspx">גלריה</a>
-                <a href="דף בית.aspx">דף הבית</a>
-                <a href="הרשמה.aspx">הרשמה</a>
-                <a href="חיפוש.aspx">חיפוש</a>
-                <a href="יציאה.aspx">יציאה</a>
-                <a href="כניסה.aspx">כניסה</a>
-                <a href="מנהל.aspx">מנהל</a>
-                <a href="עדכון פרטים.aspx">עדכון פרטים</a>
 
-        </tr2>
-    </table>
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        img.mi {
+            margin-left: 20px;
+            color: teal;
+            width: 30px;
+            height: 30px;
+        }
+
+        h1, h2 {
+            color: navy;
+        }
+
+        a {
+            color: black;
+        }
+
+     
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: beige
+        }
+
+        footer {
+            text-align: center;
+            padding-bottom: 30px
+        }
+
+        main {
+            flex: 1
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <main>
+        <h1>האתר של שירה </h1>
+        <table>
+
+            <tr>
+                <td>
+                    <a href="דף בית.aspx">דף הבית</a>
+                    <img class="mi" src="images/House-Chimney-1--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="אודות.aspx">אודות</a>
+                    <img class="mi" src="images/Information-Circle--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="חיפוש.aspx">חיפוש</a>
+                    <img class="mi" src="images/Search--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="הרשמה.aspx">הרשמה</a>
+                    <img class="mi" src="images/Pen-Write-Paper--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="כניסה.aspx">כניסה</a>
+                    <img class="mi" src="images/Login-Key--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="יציאה.aspx">יציאה</a>
+                    <img class="mi" src="images/Logout--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="גלריה.aspx">גלריה</a>
+                    <img class="mi" src="images/Taking-Pictures-Cameras--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="מנהל.aspx">מנהל</a>
+                    <img class="mi" src="images/Youtube-Studio-Logo--Streamline-Ultimate.png" />
+                </td>
+                <td>
+                    <a href="עדכון פרטים.aspx">עדכון פרטים</a>
+                    <img class="mi" src="images/Single-Neutral-Actions-Sync--Streamline-Ultimate.png" />
+                </td>
+
+
+
+
+
+
+            </tr>
+
+
+            <%-- <tr2>
+                <td><a class="mi" href="אודות.aspx">אודות</a>
+                    <a class="mi" href="גלריה.aspx">גלריה</a>
+                    <img class="mi" src="images/building_11769004.png" alt="דף הבית" href="דף הבית.aspx" />
+                    <a class="mi" href="הרשמה.aspx">הרשמה</a>
+                    <a class="mi" href="חיפוש.aspx">חיפוש</a>
+                    <a class="mi" href="יציאה.aspx">יציאה</a>
+                    <a class="mi" href="כניסה.aspx">כניסה</a>
+                    <a class="mi" href="מנהל.aspx">מנהל</a>
+                    <a class="mi" href="עדכון פרטים.aspx">עדכון פרטים</a>
+            </tr2>--%>
+        </table>
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </main>
+    <footer>
+        איזה כיף שבאתם לבקר
+    </footer>
 </body>
+
 </html>
