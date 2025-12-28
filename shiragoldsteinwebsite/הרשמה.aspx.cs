@@ -9,6 +9,7 @@ public partial class הרשמה : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        string phone = txtPhone.Text;
 
     }
 }
