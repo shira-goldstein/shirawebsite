@@ -9,6 +9,15 @@ public partial class כניסה : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+        string username = Request.Form["username"];
+        string password = Request.Form["password"];
 
+        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
+        {
+            Response.Write("שם משתמש: " + username + "<br>");
+            Response.Write("סיסמה: " + password);
+        }
     }
+
 }

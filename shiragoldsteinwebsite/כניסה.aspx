@@ -6,5 +6,18 @@
     <h2>
         הכנס/י כאן את שם המשתמש והסיסמה שלך
     </h2>
+
+    <form runat="server">
+
+    <label>שם משתמש</label>
+    <input type="text" name="username" required>
+
+    <label>סיסמה</label>
+    <input type="password" name="password" required>
+
+    <button type="submit">התחבר</button>
+
+</form>
+
 </asp:Content>
 

@@ -15,10 +15,14 @@
         <select name="phone" id="phone">
             <option value="0"> 050</option>
             <option value="1"> 051</option>
-            <option value="0"> 050</option>
-            <option value="0"> 050</option>
-            <option value="0"> 050</option>
-            <option value="0"> 050</option>
+            <option value="2"> 052</option>
+            <option value="3"> 053</option>
+            <option value="4"> 054</option>
+            <option value="5"> 055</option>
+            <option value="6"> 056</option>
+            <option value="7"> 057</option>
+            <option value="8"> 058</option>
+            <option value="9"> 059</option>
 
         </select>
         <br />
