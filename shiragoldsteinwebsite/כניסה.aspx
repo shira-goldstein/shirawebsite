@@ -16,7 +16,10 @@
     <input type="password" name="password" required>
 
     <button type="submit">התחבר</button>
-
+        <br/>
+        שם משתמש= <%=username %>
+        <br/>
+        סיסמה= <%=password %>
 </form>
 
 </asp:Content>

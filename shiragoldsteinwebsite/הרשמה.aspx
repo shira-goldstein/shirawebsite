@@ -3,15 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <h2>הרשמ/י כאן!
+    <h2> הרשמ/י כאן!
         <br />
-        שם פרטי:
-        <input type="text" name="firstName1" id="firstName1" />
+        
+        שם פרטי:<input type="text" name="firstName1" id="firstName1" />
         <br />
         שם משפחה:<input type="text" name="firstName2" id="firstName2" />
         <br />
-        טלפון:<br />
-        <input type="text" name="number" id="number" />
+      
+        טלפון:<input type="text" name="number" id="number" />
         <select name="phone" id="phone">
             <option value="0"> 050</option>
             <option value="1"> 051</option>
@@ -26,8 +26,9 @@
 
         </select>
         <br />
-
+        מייל<input type="text" name="email" id="email" />
         <br />
+
 
     </h2>
 </asp:Content>

@@ -7,17 +7,15 @@ using System.Web.UI.WebControls;
 
 public partial class כניסה : System.Web.UI.Page
 {
+    public string username;
+    public string password;
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        string username = Request.Form["username"];
-        string password = Request.Form["password"];
 
-        if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
-        {
-            Response.Write("שם משתמש: " + username + "<br>");
-            Response.Write("סיסמה: " + password);
-        }
+        username = Request.Form["username"];
+        password = Request.Form["password"];
+
+   
     }
 
 }
