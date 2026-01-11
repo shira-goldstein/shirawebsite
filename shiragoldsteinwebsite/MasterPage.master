@@ -33,16 +33,17 @@
         body {
             display: flex;
             flex-direction: column;
-            background-color: beige
+            background-color: beige;
         }
 
         footer {
             text-align: center;
-            padding-bottom: 30px
+            padding-bottom: 30px;
         }
 
         main {
-            flex: 1
+            flex: 1;
+            height: 100%;
         }
     </style>
 </head>
@@ -97,17 +98,7 @@
             </tr>
 
 
-            <%-- <tr2>
-                <td><a class="mi" href="אודות.aspx">אודות</a>
-                    <a class="mi" href="גלריה.aspx">גלריה</a>
-                    <img class="mi" src="images/building_11769004.png" alt="דף הבית" href="דף הבית.aspx" />
-                    <a class="mi" href="הרשמה.aspx">הרשמה</a>
-                    <a class="mi" href="חיפוש.aspx">חיפוש</a>
-                    <a class="mi" href="יציאה.aspx">יציאה</a>
-                    <a class="mi" href="כניסה.aspx">כניסה</a>
-                    <a class="mi" href="מנהל.aspx">מנהל</a>
-                    <a class="mi" href="עדכון פרטים.aspx">עדכון פרטים</a>
-            </tr2>--%>
+           
         </table>
 
 
