@@ -9,13 +9,35 @@ public partial class כניסה : System.Web.UI.Page
 {
     public string username;
     public string password;
+    public string st = "";
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Page.IsPostBack)
+        {
+            username = Request.Form["username"];
+            password = Request.Form["password"];
 
-        username = Request.Form["username"];
-        password = Request.Form["password"];
+            // בדיקת משתמש רגיל
+            string sql =
+                "SELECT * FROM tUsers " +
+                "WHERE username = '" + username + "' " +
+                "AND password = '" + password + "'";
 
-   
+            bool userExists = MyAdoHelper.IsExist(sql);
+
+            if (!userExists)
+            {
+                st = "אימייל או סיסמה שגויים";
+            }
+            else
+            {
+                Response.Redirect("דף בית.aspx");
+            }
+
+
+        }
+
     }
 
 }

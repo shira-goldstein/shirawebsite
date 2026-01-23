@@ -21,6 +21,8 @@
         <br/>
         סיסמה= <%=password %>
 </form>
+    <%=st %>
+
 
 </asp:Content>
 
