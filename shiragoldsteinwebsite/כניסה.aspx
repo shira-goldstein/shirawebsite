@@ -7,7 +7,7 @@
         הכנס/י כאן את שם המשתמש והסיסמה שלך
     </h2>
 
-    <form runat="server">
+    <form runat="server" method="post">
 
     <label>שם משתמש</label>
     <input type="text" name="username" required>
@@ -17,9 +17,7 @@
 
     <button type="submit">התחבר</button>
         <br/>
-        שם משתמש= <%=username %>
-        <br/>
-        סיסמה= <%=password %>
+
 </form>
     <%=st %>
 
