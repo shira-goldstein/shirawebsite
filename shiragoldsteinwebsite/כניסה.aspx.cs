@@ -16,26 +16,36 @@ public partial class כניסה : System.Web.UI.Page
             string username = Request.Form["username"];
             string password = Request.Form["password"];
 
-            // בדיקת משתמש רגיל
-            string sql =
-                "SELECT * FROM tUsers " +
-                "WHERE username = '" + username + "' " +
-                "AND password = '" + password + "'";
 
-            bool userExists = MyAdoHelper.IsExist(sql);
-
-            if (!userExists)
+            if (username == "shira" && password == "4145929")
             {
-                st = "אימייל או סיסמה שגויים";
+                Response.Redirect("מנהל.aspx");
             }
             else
             {
-                Response.Redirect("דף בית.aspx");
-            }
 
+
+                // בדיקת משתמש רגיל
+                string sql =
+                    "SELECT * FROM tUsers " +
+                    "WHERE username = '" + username + "' " +
+                    "AND password = '" + password + "'";
+
+                bool userExists = MyAdoHelper.IsExist(sql);
+
+                if (!userExists)
+                {
+                    st = "אימייל או סיסמה שגויים";
+                }
+                else
+                {
+                    Response.Redirect("דף בית.aspx");
+                }
+
+
+            }
 
         }
 
     }
-
 }
