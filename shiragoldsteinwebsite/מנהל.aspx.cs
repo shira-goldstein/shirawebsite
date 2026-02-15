@@ -11,42 +11,50 @@ public partial class מנהל : System.Web.UI.Page
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        string sql = "SELECT * FROM tusers";
-
-        DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
-
-            if (dt.Rows.Count==0)
+        if (Page.IsPostBack)
         {
-            st = "אין נתונים";
-        }
-        else
-        {
-            st += "<table border= '1'>";
-            st += "<tr>";
-            st += "<td>שם פרטי </td>";
-            st += "<td> שם משפחה</td>";
-            st += "<td> מייל</td>";
-            st += "<td>שם משתמש </td>";
-            st += "<td> סיסמה</td>";
-            st += "<td> טלפון קידומת </td>";
-            st += "<td>מספר טלפון </td>";
-            st += "</tr>";
+            string firstName1 = Request.Form["firstName1"];
+            string secondName = Request.Form["secondName"];
 
-            for(int i=0; i< dt.Rows.Count; i++)
+            string sql = "SELECT * FROM tusers WHERE" +
+                "first_name= N'" + firstName1 + "' AND " +
+                "last_name= N'" + secondName + "'";
+
+            DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
+
+            if (dt.Rows.Count == 0)
             {
+                st = "אין נתונים";
+            }
+            else
+            {
+                st += "<table border= '1'>";
                 st += "<tr>";
+                st += "<td>שם פרטי </td>";
+                st += "<td> שם משפחה</td>";
+                st += "<td> מייל</td>";
+                st += "<td>שם משתמש </td>";
+                st += "<td> סיסמה</td>";
+                st += "<td> טלפון קידומת </td>";
+                st += "<td>מספר טלפון </td>";
+                st += "</tr>";
 
-                for(int k=0; k< dt.Columns.Count; k++)
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    st += "<td>" + dt.Rows[i][k] + "</td>";
+                    st += "<tr>";
+
+                    for (int k = 0; k < dt.Columns.Count; k++)
+                    {
+                        st += "<td>" + dt.Rows[i][k] + "</td>";
+                    }
+
+                    st += "</tr>";
                 }
 
-                st += "</tr>";
+                st += "</table>";
+
             }
 
-            st += "</table>";
-
         }
-            
     }
 }
