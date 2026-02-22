@@ -34,28 +34,28 @@ public partial class הרשמה : System.Web.UI.Page
             }
             else
             {
-                Response.Redirect("דף בית.aspx");
+
+
+
+
+                string sql =
+                    "INSERT INTO tUsers " +
+                    "VALUES(" +
+                    "N'" + firstName1 +
+                    "', N'" + secondName +
+                    "', N'" + email +
+                    "', N'" + username +
+                    "', N'" + password +
+                    "', N'" + prefix +
+                    "', N'" + number +
+                    "')";
+
+                MyAdoHelper.DoQuery("App_Data\\myDB.mdf", sql);
+
+                st = "ההרשמה בוצעה בהצלחה 🎉";
+                Response.Redirect("כניסה.aspx");
+
             }
-
-
-            string sql =
-                "INSERT INTO tUsers " +
-                "VALUES(" +
-                "N'" + firstName1 +
-                "', N'" + secondName +
-                "', N'" + email +
-                "', N'" + username +
-                "', N'" + password +
-                "', N'" + prefix +
-                "', N'" + number +
-                "')";
-
-            MyAdoHelper.DoQuery("App_Data\\myDB.mdf", sql);
-
-            st = "ההרשמה בוצעה בהצלחה 🎉";
-            Response.Redirect("כניסה.aspx");
-
-
 
 
         }

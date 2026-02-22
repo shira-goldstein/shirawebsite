@@ -17,8 +17,9 @@ public partial class מנהל : System.Web.UI.Page
             string secondName = Request.Form["secondName"];
 
             string sql = "SELECT * FROM tusers WHERE" +
-                "first_name= N'" + firstName1 + "' AND " +
-                "last_name= N'" + secondName + "'";
+                "first_name LIKE N'%" + firstName1 + "%' AND " +
+                "last_name= N'%" + secondName + "%'";
+
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
