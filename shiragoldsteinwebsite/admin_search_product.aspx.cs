@@ -6,19 +6,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class מנהל : System.Web.UI.Page
+public partial class admin_search_product : System.Web.UI.Page
 {
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack)
         {
-            string firstName1 = Request.Form["firstName1"];
-            string secondName = Request.Form["secondName"];
+            string query = Request.Form["query"];
+            
 
-            string sql = "SELECT * FROM tusers WHERE" +
-                " first_name LIKE N'%" + firstName1 + "%' AND " +
-                "last_name LIKE N'%" + secondName + "%'";
+            string sql = "SELECT * FROM titems WHERE" +
+                " itemName LIKE N'%" + query + "%' or " +
+                "itemDescription LIKE N'%" + query + "%'";
 
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
@@ -31,13 +31,10 @@ public partial class מנהל : System.Web.UI.Page
             {
                 st += "<table border= '1'>";
                 st += "<tr>";
-                st += "<td>שם פרטי </td>";
-                st += "<td> שם משפחה</td>";
-                st += "<td> מייל</td>";
-                st += "<td>שם משתמש </td>";
-                st += "<td> סיסמה</td>";
-                st += "<td> טלפון קידומת </td>";
-                st += "<td>מספר טלפון </td>";
+                st += "<td>id </td>";
+                st += "<td>itemName </td>";
+                st += "<td> itemDescription</td>";
+                st += "<td> itemPrice</td>";
                 st += "</tr>";
 
                 for (int i = 0; i < dt.Rows.Count; i++)

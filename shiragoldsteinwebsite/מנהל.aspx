@@ -13,6 +13,7 @@
         <input type="submit" value="שלח" />
     </form>
     <%=st%>
+<a href="admin_search_product.aspx">חיפוש מוצר</a>
 </asp:Content>
 
 

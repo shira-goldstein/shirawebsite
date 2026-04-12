@@ -14,7 +14,7 @@ public partial class _Default : System.Web.UI.Page
         {
             string itemName = Request.Form["itemName"];
             string itemDescription = Request.Form["itemDescription"];
-            string itemPrice = Request.Form["itemPrice"];***
+            string itemPrice = Request.Form["itemPrice"];//to delete
             string meat = Request.Form["meat"];
 
 
