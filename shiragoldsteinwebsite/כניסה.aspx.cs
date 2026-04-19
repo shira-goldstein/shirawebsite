@@ -46,7 +46,7 @@ public partial class כניסה : System.Web.UI.Page
                 else
                 {
                     Session["user"] = "ok";
-                    Session["name"] = dt.Rows[0]["username"];
+                    Session["name"] = dt.Rows[0]["first_name"];
                     Response.Redirect("דף בית.aspx");
                 }
 
