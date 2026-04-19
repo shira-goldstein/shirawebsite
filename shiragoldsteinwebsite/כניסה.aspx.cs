@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,6 +20,8 @@ public partial class כניסה : System.Web.UI.Page
 
             if (username == "shira" && password == "4145929")
             {
+                Session["nihul"] = "ok";
+                Session["name"] = "מנהל";
                 Response.Redirect("מנהל.aspx");
             }
             else
@@ -31,14 +34,19 @@ public partial class כניסה : System.Web.UI.Page
                     "WHERE username = '" + username + "' " +
                     "AND password = '" + password + "'";
 
-                bool userExists = MyAdoHelper.IsExist(sql);
+                //bool userExists = MyAdoHelper.IsExist(sql);
+                DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
-                if (!userExists)
+                if (dt.Rows.Count==0)
+                //if (!userExists)
                 {
+                    Session["name"] = "אורח";
                     st = "אימייל או סיסמה שגויים";
                 }
                 else
                 {
+                    Session["user"] = "ok";
+                    Session["name"] = dt.Rows[0]["username"];
                     Response.Redirect("דף בית.aspx");
                 }
 
