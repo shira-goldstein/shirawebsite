@@ -9,6 +9,9 @@ public partial class יציאה : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session.Clear();     // מוחק את כל הערכים
+        Session.Abandon();   // מסיים את ה-Session
 
+        Response.Redirect("כניסה.aspx");
     }
 }

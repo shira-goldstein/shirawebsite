@@ -41,7 +41,7 @@ public partial class כניסה : System.Web.UI.Page
                 //if (!userExists)
                 {
                     Session["name"] = "אורח";
-                    st = "אימייל או סיסמה שגויים";
+                    st = "שם משתמש או סיסמה שגויים";
                 }
                 else
                 {

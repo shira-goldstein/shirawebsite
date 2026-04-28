@@ -54,40 +54,58 @@
 
             <tr>
                 <td>
-                    <a href="דף בית.aspx">דף הבית</a>
-                    <img class="mi" src="images/House-Chimney-1--Streamline-Ultimate.png" />
+                    <a href="דף בית.aspx">דף הבית
+                        <img class="mi" src="images/House-Chimney-1--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="אודות.aspx">אודות</a>
-                    <img class="mi" src="images/Information-Circle--Streamline-Ultimate.png" />
+                    <a href="אודות.aspx">אודות
+                        <img class="mi" src="images/Information-Circle--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="חיפוש.aspx">חיפוש</a>
-                    <img class="mi" src="images/Search--Streamline-Ultimate.png" />
+                    <a href="חיפוש.aspx">חיפוש
+                        <img class="mi" src="images/Search--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="הרשמה.aspx">הרשמה</a>
-                    <img class="mi" src="images/Pen-Write-Paper--Streamline-Ultimate.png" />
+                    <a id="regLink" runat="server" href="הרשמה.aspx">הרשמה
+                        <img class="mi" src="images/Pen-Write-Paper--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="כניסה.aspx">כניסה</a>
-                    <img class="mi" src="images/Login-Key--Streamline-Ultimate.png" />
+                    <a href="כניסה.aspx">כניסה
+                        <img class="mi" src="images/Login-Key--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="יציאה.aspx">יציאה</a>
-                    <img class="mi" src="images/Logout--Streamline-Ultimate.png" />
+                    <a id="exitLink" runat="server" href="יציאה.aspx">יציאה
+                        <img class="mi" src="images/Logout--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="גלריה.aspx">גלריה</a>
-                    <img class="mi" src="images/Taking-Pictures-Cameras--Streamline-Ultimate.png" />
+                    <a href="גלריה.aspx">גלריה
+                        <img class="mi" src="images/Taking-Pictures-Cameras--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="מנהל.aspx">מנהל</a>
-                    <img class="mi" src="images/Youtube-Studio-Logo--Streamline-Ultimate.png" />
+                    <a id="adminLink" runat="server" href="מנהל.aspx">מנהל
+                        <img class="mi" src="images/Youtube-Studio-Logo--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
                 <td>
-                    <a href="עדכון פרטים.aspx">עדכון פרטים</a>
-                    <img class="mi" src="images/Single-Neutral-Actions-Sync--Streamline-Ultimate.png" />
+                    <a href="עדכון פרטים.aspx">עדכון פרטים
+                        <img class="mi" src="images/Single-Neutral-Actions-Sync--Streamline-Ultimate.png" />
+                    </a>
+                    
                 </td>
 
 
