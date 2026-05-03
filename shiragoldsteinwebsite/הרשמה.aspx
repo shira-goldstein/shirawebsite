@@ -5,11 +5,19 @@
         function checkAll() {
             firstErr.innerHTML = "";
             secondErr.innerHTML = "";
+            phonErr.innerHTML = "";
+            emailErr.innerHTML = "";
+            userErr.innerHTML = "";
+            passErr.innerHTML = "";
 
             f = true;
 
             f = checkFirstName() && f;
             f = checkLastName() && f;
+            f = checkPhoneName() && f;
+            f = checkEmailName() && f;
+            f = checkUserName() && f;
+            f = checkPassName() && f;
 
             return f;
         }//סוף פעולה ראשית
@@ -26,7 +34,43 @@
         function checkLastName() {
             second = document.getElementById("secondName").value;
             if (second.length < 2 || second.length > 30) {
-                secondErr.innerHTML = "אורך השם 2 לא תקין";
+                secondErr.innerHTML = "אורך השם המשפחה לא תקין";
+                return false;
+            }
+            return true
+        }// סוף בדיקת שם
+         
+        function checkPhoneName() {
+            phone = document.getElementById("number").value;
+            if (phone.length !=7) {
+                phonErr.innerHTML = "אורך מספר הטלפון לא תקין";
+                return false;
+            }
+            return true
+        }// סוף בדיקת שם
+
+        function checkEmailName() {
+            email = document.getElementById("email").value;
+            if (email.length < 2 || email.length > 30) {
+                emailErr.innerHTML = "כתובת האימייל לא תקינה";
+                return false;
+            }
+            return true
+        }// סוף בדיקת שם
+
+        function checkUserName() {
+            user = document.getElementById("username").value;
+            if (user.length < 2 || user.length > 30) {
+                userErr.innerHTML = "שם המשתמש לא תקין";
+                return false;
+            }
+            return true
+        }// סוף בדיקת שם
+
+        function checkPassName() {
+            pass = document.getElementById("password").value;
+            if (user.length < 2 || user.length > 30) {
+                passErr.innerHTML = "הסיסמה לא תקינה";
                 return false;
             }
             return true
