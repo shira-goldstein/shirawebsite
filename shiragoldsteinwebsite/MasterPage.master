@@ -21,7 +21,7 @@
         }
 
         h1, h2 {
-            color: navy;
+            color: black;
         }
 
         a {
@@ -33,7 +33,7 @@
         body {
             display: flex;
             flex-direction: column;
-            background-color: beige;
+            background-color: darkorange;
         }
 
         footer {

@@ -11,16 +11,24 @@
         background-repeat: no-repeat;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .welcome {
-        color: white;
+        color: orangered;
         font-size: 48px;
         font-weight: bold;
         text-shadow: 2px 2px 8px black;
     }
+
+    .welcome2 {
+    color: orangered;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px black;
+}
 </style>
 </asp:Content>
 
@@ -28,8 +36,11 @@
 
     <div class="bg">
     <div class="welcome">
-        ברוכים הבאים!
+        ג'ינג'י 
     </div>
+         <div class="welcome2">
+     -בשרים מעושנים- 
+ </div>
 </div>
 
 </asp:Content>
