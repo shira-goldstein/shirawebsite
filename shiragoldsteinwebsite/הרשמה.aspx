@@ -108,8 +108,9 @@
         <br />
         סיסמה<input type="text" name="password" id="password" /><span id="passErr"></span>
         <br />
-        <input type="submit" value="שלח" />
+        <input type="submit" value="שלח" /> 
     </form>
 
 </asp:Content>
+
 
