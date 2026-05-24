@@ -17,14 +17,14 @@
     }
 
     .welcome {
-        color: orangered;
+        color: darkorange;
         font-size: 48px;
         font-weight: bold;
         text-shadow: 2px 2px 8px black;
     }
 
     .welcome2 {
-    color: orangered;
+    color: darkorange;
     font-size: 30px;
     font-weight: bold;
     text-shadow: 2px 2px 8px black;
