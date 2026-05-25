@@ -27,6 +27,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             exitLink.Visible = false;
         }
+        // --- הקוד החדש להצגת השם ---
+        if (Session["name"] != null)
+        {
+            lblUserName.Text = Session["name"].ToString();
+        }
+        else
+        {
+            lblUserName.Text = "אורח";
+        }
 
 
 

@@ -7,7 +7,7 @@
         הכנס/י כאן את שם המשתמש והסיסמה שלך
     </h2>
 
-    <form runat="server" method="post">
+    
 
     <label>שם משתמש</label>
     <input type="text" name="username" required>
@@ -15,10 +15,10 @@
     <label>סיסמה</label>
     <input type="password" name="password" required>
 
-    <button type="submit">התחבר</button>
+    <asp:Button ID="btnLogin" runat="server" Text="התחבר" OnClick="btnSubmit_Click" />
         <br/>
 
-</form>
+
     <%=st %>
 
 

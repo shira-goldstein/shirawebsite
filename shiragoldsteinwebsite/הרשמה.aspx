@@ -81,7 +81,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>הרשמ/י כאן!</h2>
     <br />
-    <form method="post" runat="server" onsubmit="return checkAll();">
+   
         שם פרטי:<input type="text" name="firstName1" id="firstName1" /><span id="firstErr"></span>
         <br />
         שם משפחה:<input type="text" name="secondName" id="secondName" /><span id="secondErr"></span>
@@ -108,8 +108,7 @@
         <br />
         סיסמה<input type="text" name="password" id="password" /><span id="passErr"></span>
         <br />
-        <input type="submit" value="שלח" /> 
-    </form>
+        <asp:Button ID="btnSubmit" runat="server" Text="שלח" OnClientClick="return checkAll();" OnClick="btnSubmit_Click" />
 
 </asp:Content>
 

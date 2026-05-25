@@ -4,12 +4,11 @@
 
 <html>
 <head runat="server">
-
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
         html, body {
-            height: 100%;
+            min-height: 100vh; /* שומר שהפוטר יישאר למטה */
             margin: 0;
         }
 
@@ -20,15 +19,9 @@
             height: 30px;
         }
 
-        h1, h2 {
+        h1, h2, a {
             color: black;
         }
-
-        a {
-            color: black;
-        }
-
-     
 
         body {
             display: flex;
@@ -36,96 +29,99 @@
             background-color: darkorange;
         }
 
-        footer {
+        /* עיצוב לאזור העליון (כותרת ותפריט) */
+        header {
             text-align: center;
-            padding-bottom: 30px;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
+
+            /* ממורכז את טבלת התפריט */
+            header table {
+                margin: 0 auto;
+            }
 
         main {
             flex: 1;
-            height: 100%;
+            width: 100%;
+            background-color: darkorange; /* הוספנו את הצבע הכתום גם כאן */
+        }
+
+        /* אם את רוצה שהטקסט בגלריה יישאר קריא, נוודא שהכול שחור */
+        main, header, footer {
+            color: black;
         }
     </style>
 </head>
 <body dir="rtl">
-    <main>
-        <h1>האתר של שירה </h1>
-        <table>
+    <form id="form1" runat="server">
 
-            <tr>
-                <td>
-                    <a href="דף בית.aspx">דף הבית
+        <header>
+
+            <div style="margin-bottom: 10px;">
+                שלום,
+                <asp:Label ID="lblUserName" runat="server" Text="אורח"></asp:Label>
+            </div>
+
+            <table>
+                <tr>
+                    <td>
+                        <a href="דף בית.aspx">דף הבית
                         <img class="mi" src="images/House-Chimney-1--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a href="אודות.aspx">אודות
+                        </a>
+                    </td>
+                    <td>
+                        <a href="אודות.aspx">אודות
                         <img class="mi" src="images/Information-Circle--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a href="חיפוש.aspx">חיפוש
+                        </a>
+                    </td>
+                    <td>
+                        <a href="חיפוש.aspx">חיפוש
                         <img class="mi" src="images/Search--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a id="regLink" runat="server" href="הרשמה.aspx">הרשמה
+                        </a>
+                    </td>
+                    <td>
+                        <a id="regLink" runat="server" href="הרשמה.aspx">הרשמה
                         <img class="mi" src="images/Pen-Write-Paper--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a href="כניסה.aspx">כניסה
+                        </a>
+                    </td>
+                    <td>
+                        <a href="כניסה.aspx">כניסה
                         <img class="mi" src="images/Login-Key--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a id="exitLink" runat="server" href="יציאה.aspx">יציאה
+                        </a>
+                    </td>
+                    <td>
+                        <a id="exitLink" runat="server" href="יציאה.aspx">יציאה
                         <img class="mi" src="images/Logout--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a href="גלריה.aspx">גלריה
+                        </a>
+                    </td>
+                    <td>
+                        <a href="תפריט.aspx">תפריט
                         <img class="mi" src="images/Taking-Pictures-Cameras--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a id="adminLink" runat="server" href="מנהל.aspx">מנהל
+                        </a>
+                    </td>
+                    <td>
+                        <a id="adminLink" runat="server" href="מנהל.aspx">מנהל
                         <img class="mi" src="images/Youtube-Studio-Logo--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
-                <td>
-                    <a href="עדכון פרטים.aspx">עדכון פרטים
+                        </a>
+                    </td>
+                    <td>
+                        <a href="עדכון פרטים.aspx">עדכון פרטים
                         <img class="mi" src="images/Single-Neutral-Actions-Sync--Streamline-Ultimate.png" />
-                    </a>
-                    
-                </td>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </header>
 
+        <main>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
 
-
-
-
-
-            </tr>
-
-
-           
-        </table>
-
-
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-    </main>
-    <footer>
-        איזה כיף שבאתם לבקר
-    </footer>
+        <footer>
+            איזה כיף שבאתם לבקר
+        </footer>
+    </form>
 </body>
-
 </html>
