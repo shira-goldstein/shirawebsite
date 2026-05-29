@@ -10,7 +10,7 @@ public partial class כניסה : System.Web.UI.Page
 {
     public string st = "";
 
-    protected void btnSubmit_Click(object sender, EventArgs e)
+    protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack)
         {

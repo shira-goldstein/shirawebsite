@@ -29,7 +29,7 @@
                 return false;
             }
             return true
-        }// סוף בדיקת שם
+        }//  סוף בדיקת שם 
 
         function checkLastName() {
             second = document.getElementById("secondName").value;
@@ -38,16 +38,16 @@
                 return false;
             }
             return true
-        }// סוף בדיקת שם
-         
+        }// סוף בדיקת שם משפחה
+
         function checkPhoneName() {
             phone = document.getElementById("number").value;
-            if (phone.length !=7) {
+            if (phone.length != 7) {
                 phonErr.innerHTML = "אורך מספר הטלפון לא תקין";
                 return false;
             }
             return true
-        }// סוף בדיקת שם
+        }// סוף בדיקת טלפון
 
         function checkEmailName() {
             email = document.getElementById("email").value;
@@ -56,7 +56,7 @@
                 return false;
             }
             return true
-        }// סוף בדיקת שם
+        }// סוף בדיקת מייל
 
         function checkUserName() {
             user = document.getElementById("username").value;
@@ -65,23 +65,24 @@
                 return false;
             }
             return true
-        }// סוף בדיקת שם
+        }// סוף בדיקת שם משתמש
 
         function checkPassName() {
             pass = document.getElementById("password").value;
-            if (user.length < 2 || user.length > 30) {
+            if (pass.length < 2 || pass.length > 30) {
                 passErr.innerHTML = "הסיסמה לא תקינה";
                 return false;
             }
             return true
-        }// סוף בדיקת שם
+        }// סוף בדיקת סיסמה
 
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <h2>הרשמ/י כאן!</h2>
-    <br />
-   
+    <form method="post" runat="server">
+        <h2>הרשמ/י כאן!</h2>
+        <br />
+
         שם פרטי:<input type="text" name="firstName1" id="firstName1" /><span id="firstErr"></span>
         <br />
         שם משפחה:<input type="text" name="secondName" id="secondName" /><span id="secondErr"></span>
@@ -108,8 +109,8 @@
         <br />
         סיסמה<input type="text" name="password" id="password" /><span id="passErr"></span>
         <br />
-        <asp:Button ID="btnSubmit" runat="server" Text="שלח" OnClientClick="return checkAll();" OnClick="btnSubmit_Click" />
-
+        <button type="submit" onclick="return checkAll();">שלח</button>
+    </form>
 </asp:Content>
 
 

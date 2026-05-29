@@ -54,7 +54,6 @@
     </style>
 </head>
 <body dir="rtl">
-    <form id="form1" runat="server">
 
         <header>
 
@@ -86,7 +85,7 @@
                         </a>
                     </td>
                     <td>
-                        <a href="כניסה.aspx">כניסה
+                        <a id="logInlink" runat="server" href="כניסה.aspx">כניסה
                         <img class="mi" src="images/Login-Key--Streamline-Ultimate.png" />
                         </a>
                     </td>
@@ -122,6 +121,5 @@
         <footer>
             איזה כיף שבאתם לבקר
         </footer>
-    </form>
 </body>
 </html>

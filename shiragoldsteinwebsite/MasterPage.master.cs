@@ -22,11 +22,17 @@ public partial class MasterPage : System.Web.UI.MasterPage
         if (Session["user"] != null || Session["nihul"] != null)
         {
             exitLink.Visible = true;
+            regLink.Visible = false;
+            logInlink.Visible = false;
         }
         else
         {
             exitLink.Visible = false;
+            regLink.Visible = true;
+            logInlink.Visible = true;
         }
+
+
         // --- הקוד החדש להצגת השם ---
         if (Session["name"] != null)
         {

@@ -12,6 +12,6 @@ public partial class יציאה : System.Web.UI.Page
         Session.Clear();     // מוחק את כל הערכים
         Session.Abandon();   // מסיים את ה-Session
 
-        Response.Redirect("כניסה.aspx");
+        Response.Redirect("דף בית.aspx");
     }
 }
