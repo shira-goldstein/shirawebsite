@@ -15,6 +15,7 @@ public partial class admin_insert_product : System.Web.UI.Page
             string itemName = Request.Form["itemName"];
             string itemDescription = Request.Form["itemDescription"];
             string itemPrice = Request.Form["itemPrice"];
+            string itemImage = Request.Form["itemImage"];
 
 
 
@@ -26,11 +27,11 @@ public partial class admin_insert_product : System.Web.UI.Page
             if (isNameValid && isDescriptionValid && isPriceValid)
             {
                 string sql =
-                    "INSERT INTO tItems " +
-                    "VALUES(" +
+                    "INSERT INTO tItems(itemName, itemDescription, itemPrice, itemImage) VALUES(" +
                     "N'" + itemName +
                     "', N'" + itemDescription +
                     "', N'" + number +
+                    "', N'" + itemImage +
                     "')";
 
                 MyAdoHelper.DoQuery("App_Data\\myDB.mdf", sql);

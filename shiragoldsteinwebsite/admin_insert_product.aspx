@@ -17,11 +17,27 @@
         <label>מחיר המוצר</label>
         <input type="text" name="itemPrice" required>
 
+        <label>בחר תמונה מהגלריה:</label>
+    <select name="itemImage">
+        <%
+            // חיפוש הקבצים בתיקייה וייצור רשימה
+            string path = Server.MapPath("Images/items/");
+            if (System.IO.Directory.Exists(path))
+            {
+                string[] files = System.IO.Directory.GetFiles(path);
+                foreach (string file in files)
+                {
+                    string fileName = System.IO.Path.GetFileName(file);
+                    Response.Write("<option value='Images/" + fileName + "'>" + fileName + "</option>");
+                }
+            }
+        %>
+    </select>
+
         <button type="submit">שלח</button>
         <br />
 
     </form>
     <%=st %>
-    
 </asp:Content>
 

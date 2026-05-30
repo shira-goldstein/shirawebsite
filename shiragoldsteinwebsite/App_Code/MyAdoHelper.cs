@@ -57,6 +57,7 @@ public class MyAdoHelper
         SqlConnection conn = ConnectToDb();
         conn.Open();
         SqlCommand com = new SqlCommand(sql, conn);
+        
         com.ExecuteNonQuery();
         com.Dispose();
         conn.Close();
