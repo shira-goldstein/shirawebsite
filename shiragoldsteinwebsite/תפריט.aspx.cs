@@ -32,4 +32,30 @@ public partial class גלריה : System.Web.UI.Page
         rptMenu.DataSource = dt;
         rptMenu.DataBind();
     }
+
+
+    // הוספת הפונקציה הזו לקובץ תפריט.aspx.cs שלך
+    protected void btnAdd_Command(object sender, CommandEventArgs e)
+    {
+
+        // 1. קבלת ה-ID של הפריט שנלחץ
+        string itemId = e.CommandArgument.ToString();
+
+        // 2. ניהול הסל ב-Session
+        List<string> cart;
+        if (Session["Cart"] == null)
+        {
+            cart = new List<string>();
+        }
+        else
+        {
+            cart = (List<string>)Session["Cart"];
+        }
+
+        // 3. הוספה לרשימה ושמירה חזרה ב-Session
+        cart.Add(itemId);
+        Session["Cart"] = cart;
+
+        ((MasterPage)this.Master).UpdateCartCount();
+    }
 }

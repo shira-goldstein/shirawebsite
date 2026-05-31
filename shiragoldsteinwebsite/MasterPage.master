@@ -7,6 +7,27 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
+        .card {
+            background-color: white; /* הרקע הלבן שחסר לך */
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 300px; /* רוחב המנה */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* הצל שנותן את המראה המקצועי */
+            text-align: right;
+            display: inline-block; /* מוודא שהם יושבים אחד ליד השני */
+            vertical-align: top;
+        }
+
+        /* זה העיצוב של אזור הגלריה הכללי */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* כדי שזה יהיה ממורכז יפה */
+            direction: rtl;
+            padding: 20px;
+        }
+
         html, body {
             min-height: 100vh; /* שומר שהפוטר יישאר למטה */
             margin: 0;
@@ -34,12 +55,27 @@
             text-align: center;
             padding-top: 20px;
             padding-bottom: 10px;
+            position: relative; /* מאפשר לילדים בתוכו להיות ממוקמים ביחס אליו */
         }
 
-            /* ממורכז את טבלת התפריט */
-            header table {
-                margin: 0 auto;
-            }
+        .cart-link-container {
+            position: absolute;
+            top: 10px;
+            left: 20px; /* זה מה שמצמיד אותו לצד שמאל */
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* ממורכז את טבלת התפריט */
+        header table {
+            margin: 0 auto;
+        }
 
         main {
             flex: 1;
@@ -58,17 +94,25 @@
             padding: 10px;
         }
 
-        form {
+        /*form {
             display: flex;
             flex-direction: column;
             gap: 1px;
             width: 350px;
-            margin: 20px auto; /* ממקם את הטופס במרכז */
-            padding: 30px;
+            margin: 20px auto;*/ /* ממקם את הטופס במרכז*/
+        /*padding: 30px;
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }*/
+
+        .form-narrow {
+            width: 350px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
         }
+
         /* עיצוב גלובלי לשדות הקלט */
         input, select {
             padding: 10px;
@@ -93,6 +137,13 @@
 <body dir="rtl">
 
     <header>
+
+        <div class="cart-link-container">
+            <a href="הסל_שלי.aspx" class="cart-link">  הסל שלי    
+           <asp:Label ID="lblCartCount" runat="server" Text="(0)" style="margin-right: 5px; color: black; font-weight: bold;"></asp:Label>
+                <img class="mi" img src="images/Shopping-Cart-3--Streamline-Nova%20(2).png"   />
+            </a>
+        </div>
 
         <div style="margin-bottom: 10px;">
             שלום,
@@ -147,12 +198,16 @@
                     </a>
                 </td>
             </tr>
+
         </table>
     </header>
 
     <main>
+
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         </asp:ContentPlaceHolder>
+
+
     </main>
 
     <footer>

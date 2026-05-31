@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    <form method="post" runat="server">
+    <form method="post" runat="server" class="form-narrow">
         <h2>הכנס/י כאן את שם המשתמש והסיסמה שלך
         </h2>
 

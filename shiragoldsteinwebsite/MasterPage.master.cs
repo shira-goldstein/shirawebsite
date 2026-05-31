@@ -9,6 +9,20 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["Cart"] != null)
+        {
+            // שליפת הסל מהסשן
+            List<string> cart = (List<string>)Session["Cart"];
+
+            // עדכון ה-Label במספר הפריטים
+            lblCartCount.Text = "(" + cart.Count + ")";
+        }
+        else
+        {
+            lblCartCount.Text = "(0)";
+        }
+
+
         if (Session["nihul"] == null)
         {
             adminLink.Visible = false;
@@ -46,5 +60,13 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
 
 
+    }
+    public void UpdateCartCount()
+    {
+        if (Session["Cart"] != null)
+        {
+            List<string> cart = (List<string>)Session["Cart"];
+            lblCartCount.Text = "(" + cart.Count + ")";
+        }
     }
 }
