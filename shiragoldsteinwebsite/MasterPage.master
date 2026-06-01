@@ -17,6 +17,7 @@
             text-align: right;
             display: inline-block; /* מוודא שהם יושבים אחד ליד השני */
             vertical-align: top;
+            border: 1px solid black;
         }
 
         /* זה העיצוב של אזור הגלריה הכללי */
@@ -111,6 +112,7 @@
             margin: 20px auto;
             background-color: white;
             padding: 30px;
+            border: 1px solid black;
         }
 
         /* עיצוב גלובלי לשדות הקלט */
@@ -141,7 +143,7 @@
         <div class="cart-link-container">
             <a href="הסל_שלי.aspx" class="cart-link">  הסל שלי    
            <asp:Label ID="lblCartCount" runat="server" Text="(0)" style="margin-right: 5px; color: black; font-weight: bold;"></asp:Label>
-                <img class="mi" img src="images/Shopping-Cart-3--Streamline-Nova%20(2).png"   />
+                <img class="mi" src="images/Shopping-Cart-3--Streamline-Nova%20(2).png"   />
             </a>
         </div>
 
@@ -193,7 +195,7 @@
                     </a>
                 </td>
                 <td>
-                    <a href="עדכון פרטים.aspx">עדכון פרטים
+                    <a id="updateLink" runat="server" href="עדכון פרטים.aspx">עדכון פרטים
                         <img class="mi" src="images/Single-Neutral-Actions-Sync--Streamline-Ultimate.png" />
                     </a>
                 </td>

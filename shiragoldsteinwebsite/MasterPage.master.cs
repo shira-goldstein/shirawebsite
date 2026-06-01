@@ -38,12 +38,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
             exitLink.Visible = true;
             regLink.Visible = false;
             logInlink.Visible = false;
+            updateLink.Visible = true;
+
         }
         else
         {
             exitLink.Visible = false;
             regLink.Visible = true;
             logInlink.Visible = true;
+            updateLink.Visible = false;
         }
 
 

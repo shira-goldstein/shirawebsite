@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>מנהל</h2>
     <br />
-    <form method="post" runat="server">
+    <form method="post" runat="server" class= "form-narrow">
         שם פרטי:<input type="text" name="firstName1" id="firstName1" />
         <br />
         שם משפחה:<input type="text" name="secondName" id="secondName" />

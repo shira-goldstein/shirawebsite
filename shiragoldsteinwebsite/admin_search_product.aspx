@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <h2>חיפוש מוצר</h2>
     <br />
-    <form method="post" runat="server">
+    <form method="post" runat="server" class= "form-narrow">
         שם או תיאור המוצר:<input type="text" name="query" id="query" />
         <br />
         <input type="submit" value="שלח" />

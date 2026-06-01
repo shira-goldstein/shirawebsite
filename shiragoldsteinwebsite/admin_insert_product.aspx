@@ -6,7 +6,7 @@
     <h2>הכנס/י כאן את מה שתרצה להוסיף לתפריט:
     </h2>
 
-    <form runat="server" method="post">
+    <form runat="server" method="post" class= "form-narrow">
 
         <label>שם מוצר</label>
         <input type="text" name="itemName" required>

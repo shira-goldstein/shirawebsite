@@ -37,25 +37,37 @@ public partial class גלריה : System.Web.UI.Page
     // הוספת הפונקציה הזו לקובץ תפריט.aspx.cs שלך
     protected void btnAdd_Command(object sender, CommandEventArgs e)
     {
+        bool isUser = (Session["user"] != null);
+        bool isAdmin = (Session["nihul"] != null);
 
-        // 1. קבלת ה-ID של הפריט שנלחץ
-        string itemId = e.CommandArgument.ToString();
-
-        // 2. ניהול הסל ב-Session
-        List<string> cart;
-        if (Session["Cart"] == null)
+        if (!isUser && !isAdmin) //אם לא משתמש ולא מנהל
         {
-            cart = new List<string>();
+            //  נעביר אותו לדף כניסה
+            Response.Redirect("כניסה.aspx?msg=עליך להתחבר כדי להוסיף לסל");
         }
         else
         {
-            cart = (List<string>)Session["Cart"];
+            // אם הוא מחובר, נמשיך כרגיל עם לוגיקת ההוספה לסל
+
+            // 1. קבלת ה-ID של הפריט שנלחץ
+            string itemId = e.CommandArgument.ToString();
+
+            // 2. ניהול הסל ב-Session
+            List<string> cart;
+            if (Session["Cart"] == null)
+            {
+                cart = new List<string>();
+            }
+            else
+            {
+                cart = (List<string>)Session["Cart"];
+            }
+
+            // 3. הוספה לרשימה ושמירה חזרה ב-Session
+            cart.Add(itemId);
+            Session["Cart"] = cart;
+
+            ((MasterPage)this.Master).UpdateCartCount();
         }
-
-        // 3. הוספה לרשימה ושמירה חזרה ב-Session
-        cart.Add(itemId);
-        Session["Cart"] = cart;
-
-        ((MasterPage)this.Master).UpdateCartCount();
     }
 }
