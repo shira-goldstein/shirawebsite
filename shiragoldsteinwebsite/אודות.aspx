@@ -35,7 +35,7 @@
 </tr>
     <tr>
     <td>
-    <img class="myPicture" src="images/ba44b489-5bc6-4a8c-b9a4-35ff256059e2%20(1).png" />
+    <img class="myPicture" src="images/72b47853-db19-42c5-a81d-a3d947dab929.jfif" />
     </td>
 </tr>
         </table>

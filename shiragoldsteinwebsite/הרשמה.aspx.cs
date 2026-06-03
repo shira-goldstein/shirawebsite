@@ -22,7 +22,7 @@ public partial class הרשמה : System.Web.UI.Page
             string prefix = Request.Form["prefix"];
             string email = Request.Form["email"];
 
-            string checkSql =
+            string checkSql =// אם האימייל שמשתמש הכניס קיים כבר בטבלת משתמשים
                 "SELECT * FROM tUsers " +
                 "WHERE email = '" + email + "' ";
 
@@ -30,15 +30,15 @@ public partial class הרשמה : System.Web.UI.Page
 
             if (userExists)
             {
-                st = "אימייל תפוס";
+                st = "אימייל תפוס"; // לא ייתן לו לו להרשם עם האימייל הזה
             }
-            else
+            else // אם אין אימייל כזה עדיין
             {
 
 
 
 
-                string sql =
+                string sql =// מכניס את כל הפרטים שהמתמש מילא לטבלה
                     "INSERT INTO tUsers " +
                     "VALUES(" +
                     "N'" + firstName1 +

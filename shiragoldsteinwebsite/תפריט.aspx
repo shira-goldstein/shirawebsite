@@ -3,17 +3,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
         .gallery {
-            display: flex;  /*מסדר את התמונות בשורה */
-            flex-wrap: wrap;  /*יורד שורה כשנגמר המקום*/ 
-            gap: 20px;  /*רווח בין המנות*/ 
-            justify-content: center;  /*ממורכז לאמצע*/ 
-            direction: rtl;  /*יישור לימין לעברית*/ 
+            display: flex; /*מסדר את התמונות בשורה */
+            flex-wrap: wrap; /*יורד שורה כשנגמר המקום*/
+            gap: 20px; /*רווח בין המנות*/
+            justify-content: center; /*ממורכז לאמצע*/
+            direction: rtl; /*יישור לימין לעברית*/
             margin-top: 20px;
-            min-height: 85vh;  /*מכריח את אזור התמונות לתפוס לפחות 60% מגובה המסך*/ 
-            margin-bottom: 50px;  /*מוסיף קצת רווח מתחת למנות כדי שהטקסט לא יידבק אליהן*/ 
+            min-height: 85vh; /*מכריח את אזור התמונות לתפוס לפחות 60% מגובה המסך*/
+            margin-bottom: 50px; /*מוסיף קצת רווח מתחת למנות כדי שהטקסט לא יידבק אליהן*/
         }
 
-       }
+        }
+
         .card {
             width: 300px; /* רוחב כל מנה */
             background-color: darkorange; /* רקע לבן לכרטיסייה */
@@ -38,11 +39,20 @@
         .main-title {
             text-align: center;
         }
+
+        .tableAdds {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            width: 300px; /* רוחב תואם לכרטיסיות */
+            border: 1px solid black;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-    
+
 
     <form method="post" runat="server" class="glr">
         <h2>התפריט שלנו</h2>
@@ -50,12 +60,13 @@
 
         <div class="gallery">
             <asp:Repeater ID="rptMenu" runat="server">
-                <itemtemplate>
+                <ItemTemplate>
                     <div class="card">
                         <img src='<%# Eval("itemImage") %>' alt='<%# Eval("itemName") %>' />
                         <h3><%# Eval("itemName") %></h3>
                         <p><%# Eval("itemDescription") %></p>
                         <p><b>₪<%# Eval("itemPrice") %></b></p>
+
 
                         <asp:Button ID="btnAdd" runat="server" Text="הוסף לסל"
                             CssClass="btn-add"
@@ -63,9 +74,33 @@
                             CommandArgument='<%# Eval("id") %>'
                             OnCommand="btnAdd_Command" />
                     </div>
-                </itemtemplate>
+                </ItemTemplate>
 
             </asp:Repeater>
+
+            <table class="tableAdds">
+                <tr>
+                    <td>
+                        <strong>תוספות או שינויים </strong>
+                        <br />
+                        <input type="checkbox" name="souce" checked value="5" id="souce" />קטשופ ומיונז<br />
+                        <input type="checkbox" name="salad" value="10" id="salad" />סלט בצד<br />
+                        <input type="checkbox" name="noOnion" value="5" id="noOnion" />בלי בצל<br />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>רמת חריפות המנות </strong>
+                        <br />
+                        <input type="radio" name="radio2" checked value="0" id="לא חריף בכלל" />לא חריף בכלל<br />
+                        <input type="radio" name="radio2" value="0" id="פיקנטי" />פיקנטי<br />
+                        <input type="radio" name="radio2" value="0" id="אקסטרה חריף" />אקסטרה חריף<br />
+                    </td>
+                </tr>
+
+            </table>
+
         </div>
     </form>
 
