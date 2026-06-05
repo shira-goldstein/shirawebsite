@@ -95,17 +95,7 @@
             padding: 10px;
         }
 
-        /*form {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
-            width: 350px;
-            margin: 20px auto;*/ /* ממקם את הטופס במרכז*/
-        /*padding: 30px;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }*/
+        
 
         .form-narrow {
             width: 350px;
@@ -149,7 +139,7 @@
 
         <div style="margin-bottom: 10px;">
             שלום,
-                <asp:Label ID="lblUserName" runat="server" Text="אורח"></asp:Label>
+                <asp:Label ID="lblUserName"  runat="server" Text="אורח"></asp:Label>
         </div>
 
         <table>

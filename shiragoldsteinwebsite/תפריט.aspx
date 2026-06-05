@@ -59,17 +59,18 @@
         <!-- כותרת  -->
 
         <div class="gallery">
-            <asp:Repeater ID="rptMenu" runat="server">
-                <ItemTemplate>
+            <asp:Repeater ID="rptMenu" runat="server"> <%--עובר על הטבלה ומציג את העמודות בה--%>
+                <ItemTemplate>  <%--(תבנית הפריט (דרך ההצגה של כל פריט בטבלה--%>
+                    
                     <div class="card">
-                        <img src='<%# Eval("itemImage") %>' alt='<%# Eval("itemName") %>' />
-                        <h3><%# Eval("itemName") %></h3>
-                        <p><%# Eval("itemDescription") %></p>
-                        <p><b>₪<%# Eval("itemPrice") %></b></p>
+                        <img src='<%# Eval("itemImage") %>' alt='<%# Eval("itemName") %>' /> <%--מציג את הערך שבתוך העמודה של התמונה--%>
+                        <h3><%# Eval("itemName") %></h3> <%--מציג את הערך שבתוך העמודה של שם המוצר--%>
+                        <p><%# Eval("itemDescription") %></p> <%--מציג את הערך שבתוך העמודה של תיאור המוצר--%>
+                        <p><b>₪<%# Eval("itemPrice") %></b></p> <%--מציג את הערך שבתוך העמודה של מחיר המוצר--%>
 
 
                         <asp:Button ID="btnAdd" runat="server" Text="הוסף לסל"
-                            CssClass="btn-add"
+                            
                             CommandName="AddToCart"
                             CommandArgument='<%# Eval("id") %>'
                             OnCommand="btnAdd_Command" />

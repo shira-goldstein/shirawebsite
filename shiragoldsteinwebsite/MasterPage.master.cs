@@ -11,10 +11,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         if (Session["Cart"] != null)
         {
-            // שליפת הסל מהסשן
+                // שליפת הסל מהסשן
             List<string> cart = (List<string>)Session["Cart"];
 
-            // עדכון ה-Label במספר הפריטים
+                // עדכון ה-Label במספר הפריטים
             lblCartCount.Text = "(" + cart.Count + ")";
         }
         else
@@ -64,12 +64,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
 
     }
-    public void UpdateCartCount()
+    public void UpdateCartCount() // עדכון כמה פריטים יש בסל הקניות
     {
         if (Session["Cart"] != null)
         {
-            List<string> cart = (List<string>)Session["Cart"];
-            lblCartCount.Text = "(" + cart.Count + ")";
+            List<string> cart = (List<string>)Session["Cart"];//של הפריטים שבסל למשתנה ID מכניס את ה   
+            lblCartCount.Text = "(" + cart.Count + ")"; //מדפיס במסך בתוך סוגריים כמה פריטים יש בסל
         }
     }
 }
